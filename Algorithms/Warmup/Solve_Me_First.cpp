@@ -7,7 +7,7 @@ Select a language below, and start coding!
 
 Input Format
 
-Code that reads input from stdin is provided for you in the editor. There are 22 lines of input, and each line contains a single integer.
+Code that reads input from stdin is provided for you in the editor. There are 2 lines of input, and each line contains a single integer.
 
 Output Format
 
