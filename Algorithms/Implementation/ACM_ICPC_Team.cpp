@@ -35,6 +35,57 @@ Explanation
 (1, 3) and (3, 4) know all the 5 topics. So the maximal topics a 2-person team knows is 5, and only 2 teams can achieve this.
 **/
 
+
+/*
+NOTE: this commented code is an amzing solution in the comments that manages to pass all test cases with 0s.
+
+#include<iostream>
+#include<bitset>
+#include<vector>
+#include<string>
+using namespace std;
+
+int main()
+{
+	ios_base::sync_with_stdio(0);
+	int n,i,k;
+	string bin;
+	cin>>n>>k;
+	const size_t m=501;
+	vector< bitset<m> > arr;
+	bitset<m> temp;
+	for(i=0;i<n;i++)
+	{
+		cin>>bin;
+		bitset<m> tem(bin);
+		arr.push_back(tem);
+	}
+	int ma=0,count=0,cnt;
+	for ( i = 0; i < n-1; i++)
+	{
+		for (int j = i+1; j < n; j++)
+		{
+			temp=arr[i]|arr[j];
+			cnt=temp.count();
+			if(cnt>ma)
+			{
+				ma=cnt;
+				count=1;
+			}
+			else if(cnt==ma)
+			{
+				count++;
+			}
+		}
+	}
+	
+	cout<<ma<<endl;
+	cout<<count<<endl;
+	
+	return 0;
+}
+*/
+
 #include <cmath>
 #include <cstdio>
 #include <vector>
