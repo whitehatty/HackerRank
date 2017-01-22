@@ -42,6 +42,7 @@ m=2, so we print 1 on a new line.
 **/
 
 #include<iostream>
+#include<vector>
 
 using namespace std;
 
