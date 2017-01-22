@@ -1,3 +1,4 @@
+/**
 John Watson performs an operation called a right circular rotation on an array of integers, [a_0,...,a_n-1]. 
 After performing one right circular rotation operation, the array is transformed to [a_n-1,a_0,..,a_n-2].
 
@@ -38,3 +39,30 @@ Let's refer to the array's final state as array b. For each query, we just have 
 m=0, so we print 2 on a new line.
 m=1, so we print 3 on a new line.
 m=2, so we print 1 on a new line.
+**/
+
+#include<iostream>
+
+using namespace std;
+
+
+int main(){
+    int n;
+    int k;
+    int q;
+    cin >> n >> k >> q;
+    vector<int> a(n);
+    for(int a_i = 0;a_i < n;a_i++){
+       cin >> a[a_i];
+    }
+    k = k % n; // after k = n rotations the array is the same as initially
+    for(int a0 = 0; a0 < q; a0++){
+        int m;
+        cin >> m;        
+        int index = (n+m-k)%n ; // the index is shifted by k rotations
+        
+        cout << a[index] << endl;
+        
+    }
+    return 0;
+}
